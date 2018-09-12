@@ -1,0 +1,184 @@
+extends ../layouts/default
+
+block css
+	link(rel="stylesheet", href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css")
+
+block content
+	// Page Content
+	.container.main
+		.row.overview.justify-content-center.pb-0
+			.col-xs-12
+			h1 About Dataflow
+			p.lead
+				| Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+		// /.row
+	.container.main
+		h1 Our Team
+		.row.team.justify-content-start
+			.col-sm-6.col-lg-3.profile.profile-upper
+				a(data-target="#profile1")
+					.profile-img
+						img(src='images/people/dm.jpg', alt="David Mulville").img-responsive
+					.profile-desc
+						h3 David Mulville
+						h5 Chairman
+			.col-sm-6.col-lg-3.profile.profile-upper
+				a(data-target="#profile2")
+					.profile-img
+						img(src='images/people/jlk.jpg', alt="Jean-Loup Khayat").img-responsive
+					.profile-desc
+						h3 Jean-Loup Khayat
+						h5 CEO
+			.col-sm-6.col-lg-3.profile.profile-upper
+				a(data-target="#profile3")
+					.profile-img
+						img(src='images/people/mg.jpg', alt="Michel George").img-responsive
+					.profile-desc
+						h3 Michel George
+						h5 CFO
+			.col-sm-6.col-lg-3.profile.profile-upper
+				a(data-target="#profile4")
+					.profile-img
+						img(src='images/people/kc.jpg', alt="Khaled Chebat").img-responsive
+					.profile-desc
+						h3 Khaled Chebat
+						h5 CTO
+			.col-sm-12.profile-hidden#profile1
+				p 
+					strong David,
+					|  as Chairman of Dataflow International, has led the growth of the company’s software and services business across multiple sectors to an industry leadership position in a number of markets, most notably the Middle East and North Africa (MENA) region.
+				p In 1999 Mr. Mulville was one of the founding executives of Riverdeep Interactive Learning charged with commercializing the entity. He held the role of Executive Vice President of Corporate Development as well as Group Secretary. He oversaw the company’s initial public offering on the NASDAQ and Irish stock markets as well as an aggressive programme of acquisitions that saw Riverdeep acquire and integrate seven different companies over a 4 year period, with an acquisition value of over $800m.   Later, in a senior consulting capacity, David providing M&amp;A assistance for major acquisitions, including Houghton Mifflin and Harcourt Education publishing businesses.
+				p Prior to his career with Riverdeep, Mr. Mulville was the head of Corporate Finance for SOLIDERE sal, the Lebanese company established to rebuild Beirut Central District in the aftermath of the seventeen year civil war in Lebanon.  From 1989-1994 he held a senior position on the Irish Stock Exchange. He is also a graduate of the London Stock Exchange graduate scheme and holds a degree in law from University College, Dublin.</p></p>
+			.col-sm-12.profile-hidden#profile2
+				p 
+					strong Jean-Loup 
+					| is Chief Executive Officer at Dataflow International and Managing Partner &amp; Co-founder of the Dataflow Group and has been instrumental in establishing Dataflow International as a leading provider of e-learning solutions and services across the Middle East and North Africa (MENA) and beyond. He has over 20 years’ experience managing and developing technology environments, having in partnership established Dataflow s.a.r.l. in Lebanon in 1993, which has designed and built software solutions for the education, telecommunication and financial sectors. He has acted as technology consultant on a number of major education projects. Jean-Loup has extensive experience in designing large scale data management applications.
+			.col-sm-12.profile-hidden#profile3
+				p 
+					strong Michel 
+					| is Chief Financial Officer at Dataflow International and Managing Partner &amp; Co-founder of the Dataflow Group. He has over 20 years’ experience managing and developing technology environments, having in partnership established Dataflow s.a.r.l. in Lebanon in 1993 which has designed and built software solutions for the education, telecommunication and financial sectors. His previous experience stems from Istisharat and their subsidiary in Paris, INFOEL, where he held the position of Technico-Commercial Engineer for their Banking Division. He is also currently the CEO of Société Générale Financière du Liban SAL a financial &amp; real-estate company.
+			.col-sm-12.profile-hidden#profile4
+				p 
+					strong Khaled 
+					| is Chief Technology Officer for Dataflow International with responsibility for leading the technology engagements and development teams. In this capacity Khaled provides the IT vision and leadership for Dataflow International’s e-learning, educational ebook publishing and training solutions.
+				p Prior to Dataflow International Khaled worked for Microsoft where he was Developer &amp; Platform Evangelism (D&amp;PE) Lead for Microsoft (North Africa, Eastern Mediterranean and Pakistan) and, prior to that, Services Emerging Market Lead for Microsoft (Eastern Mediterranean &amp; Pakistan). At Microsoft he played a vital role as one of 125 Regional Directors worldwide. He joined Microsoft in 2005 from New Horizons where he was Director of Technology for their Lebanese business.
+				p As an adjunct lecturer in information technology for many years at the Université Saint-Joseph, Khaled continues to guide and mentor a new generation of innovation leaders.
+			.col-sm-6.col-lg-3.profile.profile-lower
+				a(data-target="#profile5")
+					.profile-img
+						img(src='images/people/pt.jpg', alt="Paul Thunder").img-responsive
+					.profile-desc
+						h3 Paul Thunder
+						h5 COO
+			.col-sm-6.col-lg-3.profile.profile-lower
+				a(data-target="#profile6")
+					.profile-img
+						img(src='images/people/ng.jpg', alt="Nada Gaspard").img-responsive
+					.profile-desc
+						h3 Nada Gaspard
+						h5 Director of Education
+			.col-sm-6.col-lg-3.profile.profile-lower
+				a(data-target="#profile7")
+					.profile-img
+						img(src='http://placehold.it/400x400', alt="Colette Rizk").img-responsive
+					.profile-desc
+						h3 Colette Rizk
+						h5 Business Development
+			.col-sm-6.col-lg-3.profile.profile-lower
+				a(data-target="#profile8")
+					.profile-img
+						img(src='images/people/cm.jpg', alt="Conal Markey").img-responsive
+					.profile-desc
+						h3 Conal Markey
+						h5 Production Management
+			.col-sm-12.profile-hidden#profile5
+				p 
+					strong Paul 
+					|  is Chief Operating Officer for Dataflow International, where he leads all business operations activity in the MENA region including the management of bid responses to all public sector tenders.
+				p He previously worked for EMPGI, an affiliate of Houghton Mifflin Harcourt, having joined their predecessor company Riverdeep in 2006. During that period Paul was responsible for managing major JV and strategic partnerships in the MENA region, including significant public / private sector e-learning initiatives in Saudi Arabia.
+				p Prior to joining Riverdeep, Paul spent the previous 15 years with the Smurfit Kappa Group, one of Europe’s largest packaging companies, where he was head of Sales and Marketing for one of their Irish divisions.
+			.col-sm-12.profile-hidden#profile6
+				p 
+					strong Nada 
+					| is Editor in Chief and Director of Education for Dataflow International. Working with Dataflow International’s instructional design and content development organizations Nada is instrumental in providing expert management and oversight in content and curriculum design, and pedagogy, across a wide range of e-learning and ELT projects. With specialist expertise in curriculum, language and culture in the MENA region Nada is Editor in Chief for all MENA projects.
+				p Prior to joining Dataflow International she worked for EMPGI and its predecessor company Riverdeep, with whom she worked on a number of major projects as Chief Editor and Math and Science SME on localization projects in the Arab world. She has also provided consultation on regional curriculum development including textbook digitization and enrichment and the alignment of e-learning content to curriculum. She has a thorough understanding of math and science curricula throughout the region, and has collaborated with project teams from organizations such as Pearson, Tatweer and ADEC to develop digital curriculum in English, Arabic and French.
+				p Nada holds a master’s degree from the American University of Beirut.
+			.col-sm-12.profile-hidden#profile7
+				p Officia laboris culpa anim et nisi. Adipisicing et nulla deserunt dolor proident sint sint laboris ea cillum fugiat. Culpa commodo ullamco minim deserunt esse mollit. Minim deserunt dolore sint sit. Labore laborum mollit do minim occaecat quis minim officia culpa eu veniam occaecat aute ut.
+			.col-sm-12.profile-hidden#profile8
+				p 
+					strong Conal 
+					| is responsible for operations and production for Dataflow International, overseeing project and production teams while directly managing a number of major e-learning and ELT projects. This role includes responsibility for key Dataflow International programs across U.S. and European operations.
+				p With more than 15 years of experience in education, e-Learning and technology sectors Conal has held senior production roles for major education publishers, including Riverdeep / Houghton Mifflin Harcourt. As Head of Production / General Manager for Intuition’s Publishing Technology Services division he was responsible for the delivery of cloud based LMS, custom learning content and portal offerings to global blue-chip client groups.
+				p Conal holds a Bachelor’s Degree in Business and Information Technology from Trinity College, Dublin and Diploma in Media Studies and Communications from Coláiste Dhúlaigh, Dublin.
+			
+	.container.main
+		.row.expertise
+			.col-xs-12
+				h1 Our Expertise
+				h2 Industries
+				p
+					| Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+				h2 Regional Expertise
+				p
+					| Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+				h2 Resources
+		.row.justify-content-center
+			.col-xs-12.col-sm-6.col-md-4.col-lg-3
+				h5 Development
+				p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+			.col-xs-12.col-sm-6.col-md-4.col-lg-3
+				h5 Multimedia
+				p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+			.col-xs-12.col-sm-6.col-md-4.col-lg-3
+				h5 QA
+				p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+			.col-xs-12.col-sm-6.col-md-4.col-lg-3
+				h5 Project Management
+				p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+			.col-xs-12.col-sm-6.col-md-4.col-lg-3
+				h5 Design
+				p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+			.col-xs-12.col-sm-6.col-md-4.col-lg-3
+				h5 User experience
+				p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+			.col-xs-12.col-sm-6.col-md-4.col-lg-3
+				h5 Database management
+				p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+			.col-xs-12.col-sm-6.col-md-4.col-lg-3
+				h5 Strategic consulting
+				p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+	.container-fluid.mt-5
+		.row.text-center.justify-content-center.technologies
+			.col-xs-12
+				h1.mb-4 Technologies
+				.devicons
+					div
+						i.devicon-csharp-plain
+						span C#
+					div
+						i.devicon-css3-plain
+						span CSS3
+					div
+						i.devicon-dot-net-plain
+						span .NET
+					div
+						i.devicon-html5-plain
+						span HTML5
+					div
+						i.devicon-java-plain
+						span Java
+					div
+						i.devicon-javascript-plain
+						span Javascript
+					div
+						i.devicon-nodejs-plain
+						span Node.js
+					div
+						i.devicon-swift-plain
+						span Swift
+
+block js
+	script(src="js/icons.js")
+	script(src="js/jquery/jquery.easing.min.js")
+	script(src="js/profile.js")

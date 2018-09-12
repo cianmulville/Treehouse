@@ -1,0 +1,139 @@
+include ../mixins/flash-messages
+
+doctype html
+html
+
+	//- HTML HEADER
+	head
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+		<meta name="apple-mobile-web-app-title" content="Dataflow International">
+		<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<meta name="msapplication-square70x70logo" content="dfi-tile-small.jpg"/>
+		<meta name="msapplication-square150x150logo" content="dfi-tile-medium.jpg"/>
+		<meta name="msapplication-wide310x150logo" content="dfi-tile-wide.jpg"/>
+		<meta name="msapplication-square310x310logo" content="dfi-tile-large.jpg"/>
+		<meta property="og:title" content="Dataflow International" />
+		<meta property="og:description" content="" />
+		<meta property="og:locale" content="en_US" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="http://www.dataflowinternational.com" />
+		<meta property="og:image" content="http://www.dataflowinternational.com/images/dfi-logo.jpg" />
+		//<meta property="og:video" content="http:///www.dataflowinternational.com/media/dfi-video.mp4" />
+		<link rel="manifest" href="/manifest.json">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+		<meta name="theme-color" content="#ffffff">
+		title #{title}
+		link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
+
+		//- Customise the stylesheet for your site by editing /public/styles/site.sass
+		link(href="/styles/site.css", rel="stylesheet")
+		link(href="/font-awesome/css/font-awesome.min.css" rel="stylesheet")
+		//- This file provides the default styling for the KeystoneJS Content Editor
+		if user && user.canAccessKeystone
+			link(href="/keystone/styles/content/editor.min.css", rel="stylesheet")
+
+		//- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+		//- Safely remove this block if you are not targeting IE8
+		//-[if lt IE 9]
+			script(src="//cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.js")
+			script(src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js")
+		//-[endif]
+
+		//- Include template-specific stylesheets by extending the css block
+		block css
+
+		//- Add any other template-specific HEAD tags by extending the head block
+		block head
+
+	//- HTML BODY
+	body
+
+		//- HEADER
+		header
+
+			.bg-blue
+				nav.container.navbar.navbar-toggleable-md.navbar-light
+					.logo
+						a(href='/')
+							img(src="/images/DFI_Logo_white.png", alt="DFI Logo White")
+					button.navbar-toggler.navbar-toggler-right(type="button", data-toggle="collapse", data-target="#navbarSupportedContent")
+						i.fa.fa-bars
+					.collapse.navbar-collapse#navbarSupportedContent
+						ul.navbar-nav.ml-auto
+							each link in navLinks
+								li(class="nav-item"): a(href=link.href, title=link.title)= link.label
+				
+				
+			block background
+		//- BODY
+		main
+
+			//- NOTE:
+			//- There is no .container wrapping class around body blocks to allow more flexibility in design.
+			//- Remember to include it in your templates when you override the intro and content blocks!
+
+			//- The Intro block appears above flash messages (used for temporary information display)
+			block intro
+
+			//- Flash messages allow you to display once-off status messages to users, e.g. form
+			//- validation errors, success messages, etc.
+			//- +flash-messages(messages)
+
+			//- The content block should contain the body of your template's content
+			block content
+
+
+		//- FOOTER
+		footer.footer.bg-blue
+			.container
+				.row.text-left.justify-content-between
+					.hidden-sm-down.col-md-4.text-left
+						img.logo(src="/images/DFI_Logo_white.png", alt="DFI Logo White")
+						//h3.light.small Beirut &middot; Dublin
+					.hidden-sm-down.text-left.col-md-4
+						ul.nav.flex-column
+							li <a href="/about-us">About us</a>
+							li <a href="/careers">Careers</a>
+							li <a href="/contact">Contact Us</a>
+				.row.text-center.justify-content-center
+					.col-lg-12
+						p.copyright.pt-3 Copyright &copy; 2017 Dataflow International. All rights reserved.
+
+
+
+		//- JAVASCRIPT
+
+		//- jQuery 1.11.3 is included by default, and required by both Bootstrap
+		//- and the KeystoneJS Content Editor. If you are not targeting IE8,
+		//- you can upgrade to 2.1.4 (also bundled) for better performance.
+		script(src='/js/jquery/jquery-2.1.4.min.js')
+
+		//- Customise which Bootstrap javascript files are served by including
+		//- them specifically here, instead of bootstrap-3.3.5.min.js
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js")
+		script(src='/js/bootstrap/bootstrap-4.0.0.min.js')
+		script(src='/js/custom.js')
+		//- The KeystoneJS Content Editor provides support for ks-editable data attributes,
+		//- which generate links to edit content for users who can access Keystone
+		if user && user.canAccessKeystone
+			script(src='/keystone/js/content/editor.js')
+
+		//- Add scripts that are globally required by your site here.
+
+		//- Include template-specific javascript files by extending the js block
+		block js

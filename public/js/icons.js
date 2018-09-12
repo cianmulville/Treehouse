@@ -1,0 +1,10 @@
+jQuery(document).ready(function($){
+    $(".devicons").children("div").mouseenter(
+        function(){
+            $(this).addClass("jquery-test");
+    });
+    $(".devicons").children("div").mouseleave(
+        function(){
+            $(this).removeClass("jquery-test");
+    });
+});

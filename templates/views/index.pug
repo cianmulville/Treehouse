@@ -1,0 +1,73 @@
+extends ../layouts/default
+
+block background
+	section(id="intro").intro.parallax-background
+				i(aria-hidden="true").fa.fa-play-circle-o
+
+block content
+	.container
+		.row.overview.justify-content-center
+			.col-xs-12.col-md-10.col-md-offset-1.text-center
+				h1.mt-4 Lorem Ipsum Dolor Sit Amet.
+				p.lead Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+	.container
+		.row.svgs
+			.col-xs-12.col-md-4.text-center
+				img(src='images/education.svg')
+				h2 Education
+				ul.lead
+					li Publishing
+					li Instructional Design
+					li Localization
+					li LMS Integration
+					li HTML5 Components
+					li ePub Technology
+			.col-xs-12.col-md-4.text-center
+				img(src='images/healthcare.svg')
+				h2 Healthcare
+				ul.lead
+					li Hospital Management Systems
+					li Clinical Solutions
+					li Patient Advocacy
+					li Cloud-based technology
+					li Mobile support
+			.col-xs-12.col-md-4.text-center
+				img(src='images/business.svg')
+				h2 Business
+				ul.lead
+					li Financial Technology
+					li ERP software
+					li CRM software
+					li Hospitality Management
+					li Telecommunications Software
+					li Point of Sale (POS)
+	.container(id="RecentProjects")
+		.row.clients.text-center.justify-content-center
+			.col-lg-12.mb-5
+				h1 Sample of recent Solutions
+			.col-sm-8.col-md-4.text-left.pb-5
+				.card.home-card.text-left.ml-0
+						img.projects-absolute(src="images/education.svg")
+						.home-card-block.page-scroll.case-link
+							img.card-img-home.mt-0(src="images/pearson-home.png", alt="Card image cap").mt-3.mb-3
+						.home-card-block.page-scroll.case-link
+							p.card-text Adipisicing est exercitation consequat aliqua amet qui excepteur proident occaecat elit laborum sint labore cupidatat.
+							a(href="#case-study").btn.btn-primary.mb-4 More
+			.col-sm-8.col-md-4.text-left.pb-5
+				.card.home-card.text-left.ml-0
+						img.projects-absolute(src="images/healthcare.svg")
+						.home-card-block.page-scroll.case-link
+							img.card-img-home.mt-0(src="images/santovia-home.png", alt="Card image cap").mt-3.mb-3
+						.home-card-block.page-scroll.case-link
+							p.card-text Adipisicing est exercitation consequat aliqua amet qui excepteur proident occaecat elit laborum sint labore cupidatat.
+							a(href="#case-study").btn.btn-primary.mb-4 More
+			.col-sm-8.col-md-4.text-left.pb-5
+				.card.home-card.text-left.ml-0
+						img.projects-absolute(src="images/business.svg")
+						.home-card-block.page-scroll.case-link
+							img.card-img-home.mt-0(src="images/africell.png", alt="Card image cap").mt-3.mb-3
+						.home-card-block.page-scroll.case-link
+							p.card-text Adipisicing est exercitation consequat aliqua amet qui excepteur proident occaecat elit laborum sint labore cupidatat.
+							a(href="#case-study").btn.btn-primary.mb-4 More
+block js
+	//script(src="/js/parallax.js")

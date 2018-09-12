@@ -1,0 +1,99 @@
+extends ../layouts/default
+
+block content
+		h1.text-center.mb-5 Contact Us
+		.row
+			.container.justify-content-center
+				.col-xs-12.col-md-6.col-lg-4.float-left
+					.row.address
+						.address-text
+							h3#link1.text-left.light
+								a Dublin Office
+							address
+							| Dataflow International
+							br
+							|                     Herbert House
+							br
+							|                     4, Herbert Place
+							br
+							|                     Dublin 2
+							br
+							|                     Ireland
+							br
+						.qr-code
+							a(href='/DFI_ie.vcf', title='Click/Tap to add info to your contacts')
+								img(src='/images/DFI_ie.png', alt='Add us to your address book').img-fluid
+						.clearfix
+						.full-width
+							address
+							i.fa.fa-envelope
+							a(href='mailto:info@dataflowhealth.com') info@dataflowhealth.com
+							br
+							i.fa.fa-phone
+							a(href='tel:+35315326987') +353 1 532 6987
+							br
+					.row.address
+						.address-text
+							h3#link2.text-left.light
+								a Beirut Office
+							address
+							| Dataflow International
+							br
+							|                   Yazbek Najjar Building
+							br
+							|                   Independence Avenue
+							br
+							|                   Beirut
+							br
+							|                   Lebanon
+							br
+						.qr-code
+							a(href='/DFI_lb.vcf', title='Click/Tap to add info to your contacts')
+								img(src='/images/DFI_lb.png', alt='Add us to your address book').img-fluid
+						.clearfix
+						.full-width
+							address
+							i.fa.fa-envelope
+							a(href='mailto:info@dataflowhealth.com') info@dataflowhealth.com
+							br
+							i.fa.fa-phone
+							a(href='tel:+9611326868') +961 1 326868
+				.col-xs-12.col-md-6.col-lg-8.float-left
+					#map(style='height:400px; width:100% ;')
+
+		.row.mt-5.justify-content-center.the-form.mb-0.clear-left
+			.form-overlay
+				.container
+					.col-xs-12.margin-auto
+							h1.mt-5.light.text-center Send us a message
+							if enquirySubmitted
+								h5.light Thanks for getting in touch.
+							form(method='post')
+								input(type='hidden', name='action', value='contactUs')
+								.col-md-6.float-left
+									.form-group(class=validationErrors.name ? 'has-error' : null)
+										label Name
+										input(type='text', name='name', value=formData['name']).form-control
+									.form-group(class=validationErrors.email ? 'has-error' : null)
+										label Email
+										input(type='email', name='email', value=formData.email).form-control
+									.form-group
+										label Phone
+										input(type='text', name='phone', value=formData.phone, placeholder='(optional)').form-control
+									
+								.col-md-6.float-left
+									.form-group(class=validationErrors.enquiryType ? 'has-error' : null)
+										label What are you contacting us about?
+										select(name='enquiryType').form-control
+											option(value='') (select one)
+											each type in enquiryTypes
+												option(value=type.value, selected=formData.enquiryType == type.value)= type.label
+									.form-group(class=validationErrors.message ? 'has-error' : null)
+										label Message
+										textarea(name='message', placeholder='Leave us a message...' rows=5).form-control= formData.message
+								.form-actions.text-center.clear-left
+									button(type='submit').btn.btn-primary Send
+block js
+	//script(type="text/javascript", async=true, defer=true, src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyBgppZ6Yl4r3-YLwKjJtaVWl3i5yQP7oXU&callback=initMap")
+	<script type="text/javascript" async defer src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyBgppZ6Yl4r3-YLwKjJtaVWl3i5yQP7oXU&callback=initMap"></script>
+	script(src="js/maps.js", type="text/javascript")
